@@ -15,9 +15,9 @@ const projects: Project[] = [
     title: "Organization Web Platform",
     role: "Full Stack Developer",
     description: "A comprehensive platform for student organizations featuring content approval workflows, learning modules, and member portfolio showcases.",
-    tech: ["Next.js", "Supabase", "Prisma", "Tailwind CSS"],
-    link: "#",
-    year: "2025",
+    tech: ["Next.js","TypeScript", "PostgreSQL", "Neon", "Prisma", "Tailwind CSS", "GSAP", "Zustand"],
+    link: "https://himikom.vercel.app",
+    year: "Nov 2025 - Dec 2025",
   },
 ];
 

@@ -36,7 +36,7 @@ export default function Sidebar() {
                   opacity: isActive ? 1 : 0 
                 }}
                 transition={{ 
-                  duration: 0.7, // Diperlambat agar elegan
+                  duration: 1.4, // Diperlambat agar elegan
                   ease: [0.16, 1, 0.3, 1] // Kurva "Ultra Smooth" (mirip iOS)
                 }}
               />

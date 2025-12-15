@@ -5,10 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const contactLinks = [
-  { label: "Email", value: "aditya@example.com", href: "mailto:aditya@example.com" },
-  { label: "GitHub", value: "github.com/aditya", href: "https://github.com/username" },
+  { label: "Email", value: "contact.aditya0003@google.com", href: "contact.aditya0003@google.com" },
+  { label: "GitHub", value: "github.com/aditya03-fend", href: "https://github.com/aditya03-fend" },
   { label: "LinkedIn", value: "linkedin.com/in/aditya", href: "https://linkedin.com/in/username" },
-  { label: "Instagram", value: "@aditya_dev", href: "https://instagram.com/username" },
+  { label: "Instagram", value: "@adtyathree", href: "https://instagram.com/adtyathree" },
   { label: "Telegram", value: "t.me/aditya", href: "https://t.me/username" },
 ];
 
@@ -19,7 +19,6 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
-    // Simulasi kirim pesan
     setTimeout(() => {
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
@@ -56,7 +55,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 className="w-full bg-transparent border-b border-neutral-800 py-2 text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder-neutral-700"
-                placeholder="John Doe"
+                placeholder="Aditya Fend"
               />
             </div>
 
@@ -72,7 +71,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full bg-transparent border-b border-neutral-800 py-2 text-white focus:outline-none focus:border-white transition-colors duration-300 placeholder-neutral-700"
-                placeholder="john@example.com"
+                placeholder="aditya@example.com"
               />
             </div>
           </div>
