@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <p>
             I believe that great software is a blend of clean code and human-centric design. 
-            I&apos;m not just building websites; I&apos;m building interactions that feel natural and fluid.
+            I&apos;m not just building websites, I&apos;m building interactions that feel natural and fluid.
           </p>
         </div>
 

@@ -12,19 +12,36 @@ const contactLinks = [
   { label: "Telegram", value: "t.me/aditya", href: "https://t.me/username" },
 ];
 
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [modal, setModal] = useState<"success" | "error" | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("submitting");
-    setTimeout(() => {
-      setStatus("success");
-      setForm({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
-  };
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setStatus("submitting");
+
+  try {
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(form),
+  });
+
+  if (!res.ok) throw new Error("Failed");
+
+  setForm({ name: "", email: "", message: "" });
+  setModal("success");
+} catch (error) {
+  setModal("error");
+} finally {
+  setStatus("idle");
+}
+
+};
 
   return (
     <PageWrapper>
@@ -137,6 +154,44 @@ export default function Contact() {
         </div>
 
       </div>
+      {modal && <Modal type={modal} onClose={() => setModal(null)} />}
     </PageWrapper>
+  );
+}
+
+function Modal({
+  type,
+  onClose,
+}: {
+  type: "success" | "error";
+  onClose: () => void;
+}) {
+  const isSuccess = type === "success";
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+      <div className="w-full max-w-md mx-4 bg-neutral-950 border border-neutral-800 rounded-xl p-8">
+        <h3
+          className={`text-xl font-semibold mb-2 ${
+            isSuccess ? "text-white" : "text-red-400"
+          }`}
+        >
+          {isSuccess ? "Message Sent" : "Something went wrong"}
+        </h3>
+
+        <p className="text-neutral-500 mb-6 text-sm leading-relaxed">
+          {isSuccess
+            ? "Thank you for reaching out. Your message has been successfully sent and I will get back to you soon."
+            : "Your message could not be sent. Please try again later or contact me via direct channels."}
+        </p>
+
+        <button
+          onClick={onClose}
+          className="text-sm uppercase tracking-wide border-b border-neutral-600 hover:border-white text-white pb-1 transition-colors"
+        >
+          Close
+        </button>
+      </div>
+    </div>
   );
 }

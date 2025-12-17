@@ -12,10 +12,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Talent Interest Platform",
+    role: "Frontend Developer",
+    description: "I built a talent and interest web interface using modern frontend technologies with a clean, minimal design, focusing on high user experience, fast performance, and a lightweight, responsive website.",
+    tech: ["Next.js", "Tailwind CSS", "Shadcn UI", "Framer Motion", "Axios", "Zustand"],
+    link: "https://minat-bakat-zeta.vercel.app",
+    year: "Dec 2025 - Present",
+  },
+  {
     title: "Organization Web Platform",
-    role: "Full Stack Developer",
+    role: "Fullstack Developer",
     description: "A comprehensive platform for student organizations featuring content approval workflows, learning modules, and member portfolio showcases.",
-    tech: ["Next.js","TypeScript", "PostgreSQL", "Neon", "Prisma", "Tailwind CSS", "GSAP", "Zustand"],
+    tech: ["Next.js","TypeScript", "PostgreSQL", "Neon", "Prisma", "Tailwind CSS", "GSAP"],
     link: "https://himikom.vercel.app",
     year: "Nov 2025 - Dec 2025",
   },
