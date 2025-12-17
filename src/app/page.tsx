@@ -21,11 +21,11 @@ export default function Home() {
         <div className="space-y-6 text-neutral-400 leading-loose max-w-xl">
           <p>
             Hi, I&apos;m <strong className="text-white font-medium">Aditya</strong>. 
-            Currently a Computer Science student with a deep passion for <strong className="text-white font-medium">Frontend Development.</strong>
+            Currently a Computer Science student and aspiring .<strong className="text-white font-medium">Frontend Developer.</strong>
           </p>
           <p>
-            I believe that great software is a blend of clean code and human-centric design. 
-            I&apos;m not just building websites, I&apos;m building interactions that feel natural and fluid.
+            I specialize in building modern, responsive user interfaces with a strong focus on usability and performance. I enjoy translating designs into clean, maintainable code and creating smooth user experiences using React and modern frontend tools.<br /><br />
+            I’m actively improving my skills through hands-on projects and looking for opportunities to grow as a professional frontend developer.
           </p>
         </div>
 

@@ -7,9 +7,9 @@ import { useState } from "react";
 const contactLinks = [
   { label: "Email", value: "contact.aditya0003@google.com", href: "contact.aditya0003@google.com" },
   { label: "GitHub", value: "github.com/aditya03-fend", href: "https://github.com/aditya03-fend" },
-  { label: "LinkedIn", value: "linkedin.com/in/aditya", href: "https://linkedin.com/in/username" },
+  { label: "LinkedIn", value: "linkedin.com/in/aditya-fend", href: "https://linkedin.com/in/aditya-fend-42216b389" },
   { label: "Instagram", value: "@adtyathree", href: "https://instagram.com/adtyathree" },
-  { label: "Telegram", value: "t.me/aditya", href: "https://t.me/username" },
+  { label: "Telegram", value: "t.me/aditya_fend", href: "https://t.me/aditya_fend" },
 ];
 
 
